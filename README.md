@@ -48,3 +48,15 @@ pm2 restart app
 //修改完ssl.conf，重启nginx服务
 nginx -s reload
 
+
+
+
+
+
+
+
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/benniao-chen/cloud-server-config.git
+git push -u origin master
