@@ -32,3 +32,9 @@ exit
 查看宿主机的 /data 目录, 并没有 simple_docker 文件夹, 说明容器内的操作不会影响到宿主机
 ls /data
 
+查看所有的容器信息， 能获取容器的id
+docker ps -a
+然后执行如下命令
+，保存镜像：
+docker commit -m="备注" 你的CONTAINER_ID 你的IMAGE
+

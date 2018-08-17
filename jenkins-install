@@ -1,0 +1,20 @@
+首先我们需要准备 Java 环境，使用下面命令来安装 Java：
+yum -y install java-1.8.0-openjdk-devel
+
+为了使用 Jenkins 仓库，我们要执行以下命令：
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+如果您以前从 Jenkins 导入过 key，那么 rpm --import 将失败，因为您已经有一个 key。请忽略，继续下面步骤。
+安装
+接着我们可以使用 yum 安装 Jenkins：
+yum -y install jenkins
+
+启动 Jenkins 并设置为开机启动：
+systemctl start jenkins.service
+chkconfig jenkins on
+
+登入 Jenkins 需要输入管理员密码，按照提示，我们使用以下命令查看初始密码：
+cat /var/lib/jenkins/secrets/initialAdminPassword
+复制密码，填入，进入 Jenkins。
+
+我们选择默认的 install suggested plugins 来安装插件。

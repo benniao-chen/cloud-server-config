@@ -1,5 +1,3 @@
-curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
-yum install nodejs -y
 npm install pm2 --global
 npm install express --save
 
